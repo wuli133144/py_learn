@@ -99,21 +99,81 @@ def isvalid(arg):
 
 List=[3,4,2,6,743,34];
 
+'''
+ sorted function
+ 
+'''
 def sorted(l=[]):
     if l is None:
         return []
     else:
-        for i in List:
-            for j in List[i+1:]:
-                if i >j:
-                    a=i
-                    i=j
-                    j=a
+        for i in range(len(l)):
+            for j in range(i+1,len(l)):
+                 if l[i]>l[j] :
+                     a=l[i]
+                     l[i]=l[j]
+                     l[j]=a
+
 
     return l
 
 
 
 
-a=sorted(List)
+#a=sorted(List)
+#print(a)
 
+class stack(object):
+    '''
+     stack include
+     push()
+     pop()
+     size()
+     capacity()
+    '''
+    def __init__(self,capaci):
+
+            self.capacity=capaci
+            self.size=0
+            self.__container=[]
+
+
+    def push(self,v):
+        if self.size > self.capacity:
+            return
+        self.__container.append(v)
+        self.size=self.size+1
+
+
+    def pop(self):
+        if self.size < 1:
+            return None
+        self.size=self.size-1
+        return self.__container.pop()
+
+    def getsize(self):
+        return self.size
+
+    def getcapacity(self):
+        return self.capacity
+
+    def __repr__(self):
+        if self.size <1 :
+          return "stack "
+        else :
+            return "statck size="+str(self.getsize())
+    def show(self):
+        if self.getsize() <1 :
+            return
+        for i in self.__container:
+             print(i)
+
+
+
+s=stack(100)
+s.push("12123")
+s.push("fdsfsda")
+#s.pop()
+s.show()
+print(s.getsize())
+print(s)
