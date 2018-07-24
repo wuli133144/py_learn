@@ -168,12 +168,3 @@ class stack(object):
         for i in self.__container:
              print(i)
 
-
-
-s=stack(100)
-s.push("12123")
-s.push("fdsfsda")
-#s.pop()
-s.show()
-print(s.getsize())
-print(s)
