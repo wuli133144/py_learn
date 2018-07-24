@@ -58,17 +58,48 @@ class ListNode(object):
 
 
 
-a=ListNode(3)
-a.add(5)
-a.add(6)
-a.add(5)
-a.add(5)
-a.show()
-print("===================")
-#print(a.size())
+def printCommonItems(iterm1,iterm2):
+    if  isinstance(iterm1,ListNode) ==False  or isinstance(iterm2,ListNode) == False:
+         print("args type is unsuitable")
+         return
 
-a=a.reverse()
+    p=iterm1
+    q=iterm2
+    #Ls=list()
 
-a.show()
+    while p != None and q != None :
+        if p.value==q.value :
+            #Ls.append(p.value)
+            print(str(p.value)+" ")
+            p=p.next
+            q=q.next
+            #pass
+        elif p.value > q.value:
+              q=q.next
+
+        else:
+             p=p.next
+
+
+
+#a=ListNode(3)
+
+
+a=ListNode(11)
+a.add(12)
+a.add(13)
+a.add(14)
+a.add(15)
+
+b=ListNode(11)
+b.add(13)
+b.add(15)
+b.add(25)
+
+
+
+print("xxx")
+printCommonItems(a,b)
+
 
 
