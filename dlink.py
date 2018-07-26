@@ -81,10 +81,59 @@ class doublelink(object):
             q+=1
             p = p.next
         return q
+
+    """
+     reverse doublelink
+    """
+
     def reverse(self):
         if self.head == None:
             return
+        p=self.head
+        q=p
+        while p != None:
+            q=p
+            p=p.next
+            m=q.pre
+            q.pre=q.next
+            q.next=m
 
+        self.head=q
+
+    def  delKnode(self,k):
+        if isinstance(k,int) is False or k < 1 :
+            return False
+
+        sz=self.sz() if self.sz() != 0 else None
+
+        p=self.head
+        q=p
+        i=0
+        while p!= None and i < k:
+             q=p
+             p=p.next
+             i+=1
+
+        if p != None:
+            q.next=p.next
+            pass
+        else:
+            q.next=None
+
+        return True
+
+    def find(self,v):
+        p=self.head
+        while p != None:
+            if p.value1()  == v:
+                break
+            p=p.next
+        if p != None:
+            return True
+        return False
+    def __repr__(self):
+        a="double list "
+        print(a)
 
 
 d=doublelink()
@@ -97,5 +146,34 @@ d.add(56)
 
 d.show()
 print(d.sz())
+
+
+print("############find()##############")
+
+b=d.find(23)
+print(b)
 print("##################")
 d.rshow()
+
+print("###############")
+
+
+d.reverse()
+d.show()
+
+
+print("####################")
+
+d.rshow()
+
+print("del k node")
+
+
+d.delKnode(5)
+d.show()
+
+
+print("############find()##############")
+
+b=d.find(23)
+print(b)
