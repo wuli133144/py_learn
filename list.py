@@ -33,7 +33,7 @@ class ListNode(object):
     def show(self):
         t=self
         while t != None:
-            print(t.value)
+            print("element :"+str(t.value)+ " ")
             t=t.next
 
     def reverse(self):
@@ -85,21 +85,21 @@ def printCommonItems(iterm1,iterm2):
 #a=ListNode(3)
 
 
-a=ListNode(11)
-a.add(12)
-a.add(13)
-a.add(14)
-a.add(15)
-
-b=ListNode(11)
-b.add(13)
-b.add(15)
-b.add(25)
-
-
-
-print("xxx")
-printCommonItems(a,b)
+# a=ListNode(11)
+# a.add(12)
+# a.add(13)
+# a.add(14)
+# a.add(15)
+#
+# b=ListNode(11)
+# b.add(13)
+# b.add(15)
+# b.add(25)
+#
+#
+#
+# print("xxx")
+# printCommonItems(a,b)
 
 
 
