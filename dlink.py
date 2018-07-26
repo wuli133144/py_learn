@@ -42,7 +42,7 @@ class doublelink(object):
             node.next = self.head.next
             self.head.next.pre=node
             self.head.next = node
-
+        self.size+=1
 
     def show(self):
         p=self.head
@@ -119,7 +119,7 @@ class doublelink(object):
             pass
         else:
             q.next=None
-
+        self.size-=1
         return True
 
     def find(self,v):
