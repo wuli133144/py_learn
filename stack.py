@@ -36,10 +36,9 @@ class stack(object):
         return self.minConn
 
     def __repr__(self):
+
         """
-
          tostirng
-
         :return:
         """
         print("xxxxx stack")

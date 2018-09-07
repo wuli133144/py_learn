@@ -6,13 +6,13 @@ import  math
 
 class Node(object):
     def __init__(self):
-        self.pre=None
-        self.next=None
+        self.pre  =None
+        self.next =None
         self.value=None
 
     def __init__(self,value):
-        self.pre=None
-        self.next=None
+        self.pre = None
+        self.next= None
         self.value=value
 
     def value1(self):
